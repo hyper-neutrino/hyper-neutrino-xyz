@@ -1,0 +1,13 @@
+<div id="navbar" class="{{ 'sticky' if __navbar_stuck else '' }}">
+  {%- for url, name in __navbar_elements -%}
+    <a href="{{ url }}" class="{{ 'selected' if request.endpoint and url_for(request.endpoint) == url else '' }}">{{ name }}</a>
+  {%- endfor -%}
+  
+  {%- if user -%}
+    <a href="/edit-profile" class="{{ 'selected' if request.endpoint and url_for(request.endpoint) == '/edit-profile' else '' }} right">{{ user.username }}</a>
+    <a href="/logout{%- if request.endpoint -%}{{ '?next=' + (url_for(request.endpoint) | e) }}{%- endif -%}" class="right">Log Out</a>
+  {%- else -%}
+    <a href="/signup{%- if request.endpoint -%}{{ '?next=' + (url_for(request.endpoint) | e) }}{%- endif -%}" class="{{ 'selected' if request.endpoint and url_for(request.endpoint) == '/signup' else '' }} right">Sign Up</a>
+    <a href="/signin{%- if request.endpoint -%}{{ '?next=' + (url_for(request.endpoint) | e) }}{%- endif -%}" class="{{ 'selected' if request.endpoint and url_for(request.endpoint) == '/signin' else '' }} right">Sign In</a>
+  {%- endif -%}
+</div>

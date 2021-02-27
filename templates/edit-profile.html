@@ -1,0 +1,45 @@
+{%- extends 'layout.html' -%}
+
+{%- block title -%}
+  Edit Profile
+{%- endblock -%}
+
+{%- block background -%}
+  <div id="index-background" class="background image-background rellax" data-rellax-speed="-5"></div>
+{%- endblock -%}
+
+{%- block main -%}
+  <div id="container">
+    <h1>
+      Edit Profile
+    </h1>
+    <form method="post">
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="text" name="username" id="username" placeholder=" " value="{{ _username or user.username }}" required />
+        <label class="material-field-container-label" for="username">Username</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="email" name="email" id="email" placeholder=" " value="{{ _email or user.email }}" required />
+        <label class="material-field-container-label" for="email">Email</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="password" name="oldpass" id="oldpass" placeholder=" " />
+        <label class="material-field-container-label" for="oldpass">Old Password</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="password" name="newpass" id="newpass" placeholder=" " />
+        <label class="material-field-container-label" for="newpass">New Password</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="password" name="repeatpass" id="repeatpass" placeholder=" " />
+        <label class="material-field-container-label" for="repeatpass">Repeat Password</label>
+      </div>
+      <br /><br />
+      <input class="contained-button" type="submit" id="submit" value="Save" />
+    </form>
+  </div>
+{%- endblock -%}

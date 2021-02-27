@@ -1,0 +1,114 @@
+:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #fff0 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+[readonly] {
+  background-color: #ddd;
+  color: #888;
+}
+
+input,
+select,
+textarea {
+  border-radius: 3px;
+  font-size: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 2px;
+  outline: none;
+  padding: 3px 8px;
+  resize: none;
+  background-color: #eee;
+  border: 1px solid #111;
+  color: #111;
+}
+
+textarea.large-textbox {
+  width: 100%;
+  height: 12em;
+}
+
+textarea.large-textbox:focus:not([readonly]) {
+  border: 1px solid #88f;
+}
+
+.material-field-container>input {
+  border: none;
+  border-bottom: 1px solid #888;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 1px;
+}
+
+.material-field-container>label {
+  cursor: text;
+}
+
+.material-field-container>input:focus:not([readonly]) {
+  border-bottom: 2px solid #88f;
+  margin-bottom: 0;
+}
+
+.material-field-container {
+  position: relative;
+  display: flex;
+}
+
+.material-input-container {
+  display: inline-block;
+}
+
+.material-field-container>label.material-field-container-label {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 1em;
+  color: #888;
+}
+
+.material-field-container>:not(label):focus:not([readonly])+label.material-field-container-label {
+  color: #33c;
+}
+
+.material-input-container>label.material-field-container-label {
+  transition: top .25s, font-size .25s;
+  top: 2em;
+  font-size: 80%;
+}
+
+.material-textbox-container>label.material-field-container-label {
+  transition: top .25s, font-size .25s;
+  top: 1.5em;
+  font-size: 80%;
+}
+
+.material-input-container>:not(label):focus:not([readonly])+label.material-field-container-label,
+.material-input-container>:not(label):not(:placeholder-shown)+label.material-field-container-label {
+  transition: top .25s, font-size .25s;
+  top: 1em;
+  font-size: 60%;
+}
+
+.material-textbox-container>:not(label):focus:not([readonly])+label.material-field-container-label,
+.material-textbox-container>:not(label):not(:placeholder-shown)+label.material-field-container-label {
+  transition: top .25s, font-size .25s;
+  top: 1em;
+  font-size: 60%;
+}
+
+.material-field-container>:not(label) {
+  padding-top: 1.5em;
+}
+
+.medium-input-size {
+  width: 10vw;
+}
+
+.small-input-size {
+  width: 6vw;
+}
+
+.standard-input-size {
+  width: 33vw;
+}

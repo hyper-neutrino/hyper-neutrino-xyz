@@ -1,0 +1,28 @@
+{%- extends 'layout.html' -%}
+
+{%- block styling -%}
+  <style>
+    #navbar {
+      background-color: #fffc;
+      color: #111;
+    }
+  </style>
+{%- endblock -%}
+
+{%- block title -%}
+  404
+{%- endblock -%}
+
+{%- block background -%}
+  <div id="error-404-background" class="background image-background rellax" data-rellax-speed="-5"></div>
+{%- endblock -%}
+
+{%- block main -%}
+  <div id="container">
+    <h3>
+      You encountered a 404: Not Found!
+    </h3>
+    
+    The resource you requested is not available on this site. If you entered this URL manually, please check the spelling, including capitalization. If you found this via a link on the site, please <a href="/report-an-issue">report the issue</a>. Otherwise, click <a href="/">here</a> to return to the homepage.
+  </div>
+{%- endblock -%}

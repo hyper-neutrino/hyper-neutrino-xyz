@@ -1,0 +1,152 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 3em 0;
+  background-color: #eee;
+}
+
+header.announcement {
+  text-align: center;
+  background-color: #333;
+  color: #f3f3f3;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  font-size: 120%;
+  
+  padding-top: 0.5em;
+}
+
+#container {
+  padding: 10px 25px;
+  background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 110%;
+  min-height: 100%;
+}
+
+#navbar {
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  background-color: #fff8;
+  color: #111;
+  width: 100%;
+}
+
+#navbar.sticky {
+  position: fixed;
+  top: 0;
+  background-color: #f3f3f3;
+  color: #111;
+  
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 15px 20px 10px 20px;
+  text-decoration: none;
+  color: inherit;
+  
+  font-family: 'Kelly Slab', sans-serif;
+}
+
+#navbar a.right {
+  float: right;
+}
+
+#navbar a:not(.selected) {
+  padding-bottom: 15px;
+}
+
+#navbar:not(.sticky) a:hover {
+  background-color: #9992;
+}
+
+#navbar.sticky a:hover {
+  background-color: #ccc;
+}
+
+#navbar:not(.sticky) a:active {
+  background-color: #9994;
+}
+
+#navbar.sticky a:active {
+  background-color: #bbb;
+}
+
+#navbar a.selected {
+  border-bottom: 5px solid #999;
+}
+
+#navbar.sticky + #container {
+  padding-top: 60px;
+}
+
+.vdiv {
+  width: 0;
+  padding-left: 10px;
+}
+
+hr#footer-separator {
+  width: calc(100% - 50px);
+}
+
+div#endnote {
+  font-size: 90%;
+  width: 100%;
+  height: 2em;
+  margin: 0;
+  padding-bottom: 3vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+  vertical-align: bottom;
+  bottom: 0;
+}
+
+div#endnote span {
+  margin-left: 25px;
+}
+
+::placeholder {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+input {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #eee;
+}
+
+.flash {
+  margin: 25px;
+  border-radius: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.flash.error {
+  border: 1px solid red;
+  background-color: #f88;
+}
+
+.flash.info {
+  border: 1px solid #777;
+  background-color: #bbb;
+}
+
+.flash.success {
+  border: 1px solid #0a0;
+  background-color: #8c8;
+}

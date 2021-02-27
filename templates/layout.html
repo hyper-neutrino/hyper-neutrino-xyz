@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<!--
+
+    _/    _/  _/      _/  _/_/_/    _/_/_/_/  _/_/_/
+   _/    _/    _/  _/    _/    _/  _/        _/    _/
+  _/_/_/_/      _/      _/_/_/    _/_/_/    _/_/_/
+ _/    _/      _/      _/        _/        _/    _/
+_/    _/      _/      _/        _/_/_/_/  _/    _/
+
+    _/      _/  _/_/_/_/  _/      _/  _/_/_/_/_/  _/_/_/    _/_/_/_/_/  _/      _/    _/_/_/
+   _/_/    _/  _/        _/      _/      _/      _/    _/      _/      _/_/    _/  _/      _/
+  _/  _/  _/  _/_/_/    _/      _/      _/      _/_/_/        _/      _/  _/  _/  _/      _/
+ _/    _/_/  _/        _/      _/      _/      _/    _/      _/      _/    _/_/  _/      _/
+_/      _/  _/_/_/_/    _/_/_/        _/      _/    _/  _/_/_/_/_/  _/      _/    _/_/_/
+
+Personal site of Alexander "HyperNeutrino" Yujie Liao.
+
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Personal/Business site of HyperNeutrino">
+    <meta name="keywords" content="HyperNeutrino,Neutrino,Alexander,Alexander Liao">
+    <meta name="author" content="Alexander Liao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="wot-verification" content="71ccdd9a656eada991e0"/>
+    
+    <link rel="shortcut icon" type="image/png" href="/static/images/HN_icon.png"/>
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Source+Code+Pro:wght@300&family=Roboto+Condensed:wght@300&family=Baloo+Tammudu+2:wght@500&display=swap" />
+    <link rel="stylesheet" type="text/css" href="/static/css/backgrounds.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/clickables.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fields.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/static/js/base.js"></script>
+    
+    {%- block styling -%}
+    {%- endblock -%}
+    
+    <title>{%- block title -%}HyperNeutrino{%- endblock -%}</title>
+  </head>
+  
+  <body>
+    <div id="before-nav">
+      {%- block top -%}
+        <header class="announcement">Learn more about COVID-19 and what you can do to keep yourself and others safe <a href="https://www.cdc.gov/coronavirus/2019-ncov/" target="_blank">here</a>.</header>
+      {%- endblock -%}
+    </div>
+
+    {%- block navbar -%}
+      {%- with __navbar_stuck = True -%}
+        {%- include 'navbar.html' -%}
+      {%- endwith -%}
+    {%- endblock -%}
+    
+    {%- block background -%}
+    {%- endblock -%}
+    
+    {%- block flashes -%}
+      {%- for category in ["error", "info", "success"] -%}
+        {%- with messages = get_flashed_messages(category_filter = [category]) -%}
+          {%- if messages -%}
+            <div class="flash {{ category }}">
+              <ul>
+                {%- for message in messages -%}
+                  <li>{{ message }}</li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        {%- endwith -%}
+      {%- endfor -%}
+    {%- endblock -%}
+    
+    {%- block main -%}
+    {%- endblock -%}
+    
+    {%- block footer -%}
+    <div id="endnote">
+      <hr id="footer-separator">
+      <span>&copy; 2020 Alexander Liao &middot; <a href="/tos">Terms of Service</a> &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/report-an-issue">Report an Issue</a></span>
+    </div>
+    {%- endblock -%}
+  </body>
+</html>

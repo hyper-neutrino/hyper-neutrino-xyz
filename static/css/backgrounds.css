@@ -1,0 +1,20 @@
+div.background {
+  position: relative;
+  z-index: -1000;
+  width: 100vw;
+  height: 40vh;
+}
+
+div.image-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+div.background.image-background#index-background {
+  background-image: url("/static/images/background-1.jpg");
+}
+
+div.background.image-background#error-404-background {
+  background-image: url("/static/images/404.png");
+}

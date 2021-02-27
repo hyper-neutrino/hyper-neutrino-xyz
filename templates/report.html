@@ -1,0 +1,38 @@
+{%- extends 'layout.html' -%}
+
+{%- block title -%}
+  Report an Issue
+{%- endblock -%}
+
+{%- block background -%}
+  <div id="index-background" class="background image-background rellax" data-rellax-speed="-5"></div>
+{%- endblock -%}
+
+{%- block main -%}
+  <div id="container">
+    <h2>
+      Report an Issue
+    </h2>
+    
+    Please report any 404s that occurred from clicking on a link either here or on the dev site, any 5XX errors, or things that look wrong or aren't working like they should.
+    
+    <br /><br />
+    <form method="post">
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="email" name="email" id="email" placeholder=" " />
+        <label class="material-field-container-label" for="email">Email (optional)</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="text" name="url" id="url" placeholder=" " required />
+        <label class="material-field-container-label" for="url">URL where this happened</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-textbox-container">
+        <textarea class="form-field large-textbox" type="text" name="issue" id="issue" placeholder=" " required></textarea>
+        <label class="material-field-container-label" for="issue">Describe the issue</label>
+      </div>
+      <input class="contained-button" type="submit" id="submit" value="Submit Issue" />
+    </form>
+  </div>
+{%- endblock -%}

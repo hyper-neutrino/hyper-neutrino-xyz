@@ -1,0 +1,42 @@
+{%- extends 'layout.html' -%}
+
+{%- block title -%}
+  Sign Up
+{%- endblock -%}
+
+{%- block background -%}
+  <div id="index-background" class="background image-background rellax" data-rellax-speed="-5"></div>
+{%- endblock -%}
+
+{%- block main -%}
+  <div id="container">
+    <h1>
+      Sign Up
+    </h1>
+    <form method="post">
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="text" name="username" id="username" placeholder=" " value="{{ _username }}" required />
+        <label class="material-field-container-label" for="username">Username</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="email" name="email" id="email" placeholder=" " value="{{ _email }}" required />
+        <label class="material-field-container-label" for="email">Email Address</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="password" name="password" id="password" placeholder=" " required />
+        <label class="material-field-container-label" for="password">Password</label>
+      </div>
+      <br /><br />
+      <div class="material-field-container material-input-container">
+        <input class="form-field standard-input-size" type="password" name="repeatpass" id="repeatpass" placeholder=" " required />
+        <label class="material-field-container-label" for="repeatpass">Repeat Password</label>
+      </div>
+      <br /><br />
+      By signing up, you accept the <a href="/tos">Terms of Service</a>.
+      <br /><br />
+      <input class="contained-button" type="submit" id="submit" value="Sign Up" />
+    </form>
+  </div>
+{%- endblock -%}

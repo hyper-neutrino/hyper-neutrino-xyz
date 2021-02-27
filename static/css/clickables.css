@@ -1,0 +1,146 @@
+a {
+  text-decoration: none;
+  color: #33f;
+}
+
+a[disabled] {
+  pointer-events: none;
+  color: #555;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00f;
+}
+
+a.page-num {
+  font-size: 90%;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+a.unstyled-link:hover {
+  text-decoration: none;
+}
+
+button,
+.button-link,
+input[type=submit] {
+  border-radius: 5px;
+  border: none;
+  font-size: 80%;
+  font-family: 'Source Code Pro', monospace;
+  margin: 2px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.button-link:hover {
+  text-decoration: inherit;
+}
+
+button *,
+.button-link * {}
+
+.contained-button {
+  background-color: #33f;
+  color: #fff;
+}
+
+.contained-button[disabled] {
+  background-color: #ccc;
+  color: #888;
+}
+
+.contained-button.shadowed {
+  box-shadow: 1px 1px 3px #333;
+}
+
+.contained-button:not([disabled]):not(.no-hover):hover {
+  background-color: #55f;
+}
+
+.contained-button:not([disabled]):not(.no-active):active {
+  background-color: #66f;
+}
+
+.login-button {
+  padding: 0 10px;
+  margin: 0;
+  font-size: 3em;
+}
+
+.text-button,
+.outlined-button {
+  background: 0 0;
+  color: #33c;
+  font-weight: 700;
+}
+
+.text-button[disabled],
+.outlined-button[disabled] {
+  color: #888;
+}
+
+input.outlined-button,
+button.outlined-button,
+.button-link.outlined-button {
+  border: 1px solid #888;
+}
+
+.text-button:not([disabled]):not(.no-active):hover,
+.outlined-button:not([disabled]):not(.no-active):hover {
+  background-color: #8882;
+}
+
+.text-button:not([disabled]):not(.no-active):active,
+.outlined-button:not([disabled]):not(.no-active):active {
+  background-color: #8883;
+}
+
+.toggle-button {
+  font-size: 80%;
+  font-weight: 400;
+  padding: 5px 12px;
+  background-color: #555;
+  color: #fff;
+}
+
+.toggle-button:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.toggle-button:active {
+  background-color: #777;
+  color: #fff;
+}
+
+.toggle-button--active,
+.toggle-button--active:hover,
+.toggle-button--active:active {
+  background-color: #77d;
+}
+
+.toggle-button--disabled,
+.toggle-button--disabled:hover,
+.toggle-button--disabled:active {
+  cursor: default;
+  background-color: #555;
+  color: #bbb;
+}
+
+.toggle-button:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.toggle-button:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.toggle-button:not(:first-child) {
+  border-left: 1px solid #999;
+}
